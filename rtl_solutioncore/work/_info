@@ -1,0 +1,66 @@
+m255
+K4
+z2
+!s11f vlog 2024.2 2024.05, May 20 2024
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/shuran/RGB2YCbCr/rtl_solutioncore
+vRGB2YCbCr_tb
+Z1 2RGB2YCbCr_tb.sv
+Z2 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z3 !s110 1743480329
+!i10b 1
+!s100 DDLM7XWCnzX5oQ_;CJD061
+IFON2Zi:B0@_FcCT4blYMl2
+S1
+R0
+Z4 w1743480067
+8RGB2YCbCr_tb.sv
+FRGB2YCbCr_tb.sv
+Z5 8RGB2YCbCr.v
+Z6 FRGB2YCbCr.v
+!i122 1
+L0 19 136
+Z7 VDg1SIo80bB@j0V0VzS_@n1
+Z8 OW;L;2024.2;79
+r1
+!s85 0
+31
+Z9 !s108 1743480329.000000
+!s107 RGB2YCbCr.v|RGB2YCbCr_tb.sv|
+Z10 !s90 -reportprogress|300|RGB2YCbCr_tb.sv|
+!s101 -O0
+!i113 1
+o-O0
+Z11 tCvgOpt 0
+n@r@g@b2@y@cb@cr_tb
+vrgb2ycrcb
+R1
+R2
+R3
+!i10b 1
+!s100 ;^:dPZ>:`3hSD3V4SD`JQ0
+Io7EG=H[LW91e^aHXJ6li^0
+S1
+R0
+R4
+R5
+R6
+!i122 1
+L0 16 137
+R7
+R8
+r1
+!s85 0
+31
+R9
+Z12 !s107 RGB2YCbCr.v|RGB2YCbCr_tb.sv|
+R10
+!s101 -O0
+!i113 1
+o-O0
+R11
