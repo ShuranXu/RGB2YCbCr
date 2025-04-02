@@ -20,9 +20,9 @@ module RGB2YCbCr_tb();
 
 	parameter emargin = 3; // we allow a small error
 	parameter debug = 0;
-	parameter r_runlength = 64;
-	parameter g_runlength = 64;
-	parameter b_runlength = 64;
+	parameter r_length = 64;
+	parameter g_length = 64;
+	parameter b_length = 64;
 
 	// variables
 	reg clk;
@@ -54,6 +54,8 @@ module RGB2YCbCr_tb();
 
 	always #(`clk_period / 2) clk <= ~clk;
 
+	integer r_idx, g_idx, b_idx;
+
 	// testbench starts
 	initial
 	begin
@@ -69,31 +71,20 @@ module RGB2YCbCr_tb();
 
 		$display ("\n *** Color Space Converter testbench started ***\n");
 
-		while ( (r[0] <= r_runlength) && (g[0] <= g_runlength) && (b[0] <= b_runlength))
-			begin
-				@(posedge clk);
-				b[0] <= b[0] + 1;
-				if (b[0] == b_runlength)
-				begin
-					b[0] <= 0;
-					g[0] <= g[0] + 1;
-					if (g[0] == g_runlength)
-					begin
-						g[0] <= 0;
-						r[0] <= r[0] + 1;
-					end
+		for (r_idx = 0; r_idx <= r_length; r_idx = r_idx + 1) begin
+			for (g_idx = 0; g_idx <= g_length; g_idx = g_idx + 1) begin
+				for (b_idx = 0; b_idx <= b_length; b_idx = b_idx + 1) begin
+					@(posedge clk);
+					r[0] <= r_idx;
+					g[0] <= g_idx;
+					b[0] <= b_idx;
 				end
-
-				if (debug)
-					$display("r[0] = %d, g[0] = %d, b[0] = %d", r[0], g[0], b[0]);
-
-				if ( (r[0]==r_runlength) && (g[0]==g_runlength) && (b[0]==b_runlength) )
-					begin
-						$display ("\n *** Color Space Converter testbench ended ***\n");
-						$stop;
-					end
 			end
 		end
+		
+		$display ("\n *** Color Space Converter testbench ended ***\n");
+		$finish;
+	end
 
 	integer n;
 	always@(posedge clk)
