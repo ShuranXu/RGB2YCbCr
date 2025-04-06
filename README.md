@@ -1,7 +1,7 @@
 # RGB2YCbCr Project
 
 In this project, we try prototyping a simple FPGA module that converts from a (R,G,B) pixel value to a (Y, Cb, Cr) pixel using SmartHLS C++ and RTL language `verilog`.
-The idea behind this is to evaluate the pros and cons using RTL approach and C++ approach.
+The idea behind this is to evaluate the pros and cons using RTL approach and C++ approach. This project is used as an example in my HLS-series blogs:</br> https://embeddedville.hashnode.dev/fpga-prototyping-in-hls-c-part-3.
 
 ## Introduction
 
