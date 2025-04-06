@@ -81,7 +81,7 @@ module rgb2ycrcb(clk, rst, r, g, b, y, cr, cb);
 	//This gives us:
 	//
 	// Cb = B * 0x200 - 0x0AD * R - 0x153 * G
-	// Cb = (B >> 1) - 0x0AD * R - 0x153 * G	
+	// Cb = (1 << 9) * B - 0x0AD * R - 0x153 * G	
 
 
 	// calculate Y

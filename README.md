@@ -245,4 +245,5 @@ The expected simulation results are shown below:
 ## Conclusion
 
 In this project we tried both the RTL approach and HLS C++ approach to implement `RGB2YCbCr` and we see the HLS C++ approach takes
-much less time and brings more flexibility to the bigger design.
+much less time to develop and much more friendly to software engineers working with FPGAs. However, the HDL approach brings us more
+control to the design such as I/O definition.
